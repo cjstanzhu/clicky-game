@@ -9,6 +9,7 @@ function ImageContainer(props) {
                     {props.children}
                 </div>
             </div>
+            <br/>
         </>
     );
 };

@@ -6,9 +6,11 @@ function Score(props) {
         <>
             <div className="row">
                 <div className="col-12 text-center">
-                    <h3>{props.children}</h3>
+                    <h4>{props.children}</h4>
                 </div>
             </div>
+            <hr/>
+            <br/>
         </>
     );
 };
