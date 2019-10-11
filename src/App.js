@@ -9,7 +9,6 @@ import images from "./images.json";
 class App extends Component {
     state = {
         images: images,
-        //friends: friends
         score: 0,
         highScore: 0,
         history: []
@@ -28,7 +27,7 @@ class App extends Component {
             [array[i], array[j]] = [array[j], array[i]];
         };
 
-        console.log(array)
+        // console.log(array)
         this.setState({images: array});
     };
 
@@ -38,7 +37,6 @@ class App extends Component {
     };
 
     handleIncrement = (id) => {
-        // We always use the setState method to update a component's state
         if (this.state.history.indexOf(id) === -1) {
             this.setState({score: this.state.score + 1});
 
@@ -47,8 +45,7 @@ class App extends Component {
             };
 
             this.setState({history: this.state.history.concat([id])});
-
-            console.log(this.state.history.concat([id]));
+            // console.log(this.state.history.concat([id]));
 
             if ((this.state.score + 1) === 12) {
                 this.setState({history: []});
@@ -81,11 +78,8 @@ class App extends Component {
                             id={image.id}
                             key={image.id}
                             name={image.name}
-                            // removeFriend={this.removeFriend}
                             image={image.image}
                             handleIncrement={this.handleIncrement}
-                            // occupation={friend.occupation}
-                            // location={friend.location}
                         />
                         
                     ))}
